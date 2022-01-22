@@ -8,15 +8,31 @@ namespace DotNetDebugging
     {
       static void Main(string[] args)
       {
+
+        // BINARY SEARCH TREE
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(9);
+        tree.insert(4);
+        tree.insert(6);
+        tree.insert(20);
+        tree.insert(170);
+        tree.insert(15);
+        tree.insert(1);
+
+        Console.WriteLine(tree.lookup(200));
+
+        Console.WriteLine("Ended");
+        Console.ReadLine();
+
         //int result = Fibonacci(6);
         //Console.WriteLine(result);
 
-        int sum = 11;
-        int[] arr = new int[]{1, 3, 4, 9, 2};
-        int[] arr2 = new int[]{7, 3, 4, 9, 2};
+        // int sum = 11;
+        // int[] arr = new int[]{1, 3, 4, 9, 2};
+        // int[] arr2 = new int[]{7, 3, 4, 9, 2};
 
         // Container with most water array problem
-        Console.WriteLine($"Largest Container in array: {ContainerWithMostWater(arr2)}");
+        // Console.WriteLine($"Largest Container in array: {ContainerWithMostWater(arr2)}");
 
         // TWO SUM array problem
         //var idxs = FindTwoSum(arr, sum);
