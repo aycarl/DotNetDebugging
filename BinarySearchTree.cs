@@ -89,11 +89,11 @@ namespace DotNetDebugging
       {
         if (val < currentNode.value)
         {
-          currentNode = currentNode.left;
+          if (currentNode.left != null) currentNode = currentNode.left;
         } 
         else if (val > currentNode.value)
         {
-          currentNode = currentNode.right;
+          if (currentNode.right != null) currentNode = currentNode.right;
         } else {
           if (val == currentNode.value)
           {

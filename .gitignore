@@ -3,9 +3,9 @@
 /bin
 /obj
 /obj/Debug
-obj/Debug/net6.0/ref/DotNetDebugging.dll
-obj/Debug/net6.0/DotNetDebugging.pdb
-obj/Debug/net6.0/DotNetDebugging.GeneratedMSBuildEditorConfig.editorconfig
-obj/Debug/net6.0/DotNetDebugging.dll
-obj/Debug/net6.0/DotNetDebugging.csproj.CoreCompileInputs.cache
-obj/Debug/net6.0/DotNetDebugging.assets.cache
+/obj/Debug/net6.0/ref/DotNetDebugging.dll
+/obj/Debug/net6.0/DotNetDebugging.pdb
+/obj/Debug/net6.0/DotNetDebugging.GeneratedMSBuildEditorConfig.editorconfig
+/obj/Debug/net6.0/DotNetDebugging.dll
+/obj/Debug/net6.0/DotNetDebugging.csproj.CoreCompileInputs.cache
+/obj/Debug/net6.0/DotNetDebugging.assets.cache

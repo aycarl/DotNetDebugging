@@ -8,24 +8,33 @@ namespace DotNetDebugging
     {
       static void Main(string[] args)
       {
+        // RECURSIVE FACTORIAL
+        // Factorial factorial = new Factorial();
+
+        // Console.WriteLine($"Recursive Factorial of 5 {factorial.RecursiveFactorial(5)}");
+        // Console.WriteLine($"Iterative Factorial of 5 {factorial.RecursiveFactorial(5)}");
 
         // BINARY SEARCH TREE
-        BinarySearchTree tree = new BinarySearchTree();
-        tree.insert(9);
-        tree.insert(4);
-        tree.insert(6);
-        tree.insert(20);
-        tree.insert(170);
-        tree.insert(15);
-        tree.insert(1);
+        // BinarySearchTree tree = new BinarySearchTree();
+        // tree.insert(9);
+        // tree.insert(4);
+        // tree.insert(6);
+        // tree.insert(20);
+        // tree.insert(170);
+        // tree.insert(15);
+        // tree.insert(1)
+        // Console.WriteLine(tree.lookup(200));
+        // Console.WriteLine("Ended");
+        // Console.ReadLine();
 
-        Console.WriteLine(tree.lookup(200));
-
-        Console.WriteLine("Ended");
-        Console.ReadLine();
-
-        //int result = Fibonacci(6);
+        // FIBONACCI SEQUENCE
+        //int result = FibonacciIterative(6);
         //Console.WriteLine(result);
+        Fibonacci fibonacci = new Fibonacci();
+
+        Console.WriteLine("Finding the nth Fibonacci number in the sequence");
+        Console.WriteLine($"Iteratively: 5  - {fibonacci.FibonacciIterative(6)}");
+        Console.WriteLine($"Recursively: 5  - {fibonacci.FibonacciRecursive(5)}");
 
         // int sum = 11;
         // int[] arr = new int[]{1, 3, 4, 9, 2};
@@ -62,54 +71,35 @@ namespace DotNetDebugging
         return maxArea;
       }
 
-      // static int Fibonacci(int n)
-      // {
-      //   //Debug.WriteLine($"Entering {nameof(Fibonacci)} method");
-      //   //Debug.WriteLine($"We are looking for the {n}th number");
+      
 
-      //   int n1 = 0;
-      //   int n2 = 1;
-      //   int sum = 0;
+      static int[] FindTwoSum(int[] nums, int sum)
+      {
+        if (nums.Length < 2)
+        {
+          return new int[]{0, 0};
+        }
 
-      //   for (int i = 2; i <= n; i++)
-      //   {
-      //     sum = n1 + n2;
-      //     n1 = n2;
-      //     n2 = sum;
-      //     //Debug.WriteLineIf(sum == 1, $"sum is 1, n1 is {n1}, n2 is {n2}");
-      //   }
+        if (nums.Length == 2)
+        {
+          if (nums[0] + nums[1] == sum) return new int[]{0, 1};
+        }
 
-      //   //Debug.Assert(n2 == 5, "The return value is not 5 and it should be");
-      //   return n == 0 ? n1 : n2;
-      // }
-
-      // static int[] FindTwoSum(int[] nums, int sum)
-      // {
-      //   if (nums.Length < 2)
-      //   {
-      //     return new int[]{0, 0};
-      //   }
-
-      //   if (nums.Length == 2)
-      //   {
-      //     if (nums[0] + nums[1] == sum) return new int[]{0, 1};
-      //   }
-
-      //   for (int i = 0; i < nums.Length; i++)
-      //   {
-      //     for (int j = i+1; j < nums.Length; j++)
-      //     {
-      //       if ((nums[i] + nums[j]) == sum)
-      //       {
-      //         Debug.WriteLine($"pair found: {i}, {j}");
-      //           return new int[]{i, j};
-      //       }
-      //     }
-      //   }
+        for (int i = 0; i < nums.Length; i++)
+        {
+          for (int j = i+1; j < nums.Length; j++)
+          {
+            if ((nums[i] + nums[j]) == sum)
+            {
+              Debug.WriteLine($"pair found: {i}, {j}");
+                return new int[]{i, j};
+            }
+          }
+        }
 
         
-      //   return new int[]{0, 0};
-      // }
+        return new int[]{0, 0};
+      }
 
       // static int[] FindTwoSumOptimized(int[] nums, int target)
       // {
